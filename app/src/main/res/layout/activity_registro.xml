@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp"
+    tools:context=".activities.RegistroActivity">
+
+    <TextView
+        android:id="@+id/encabezado2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Registrar Ingresos / Egresos"/>
+
+
+
+
+    <EditText
+        android:id="@+id/monto_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/encabezado2"
+        android:hint="Monto"
+        />
+
+    <LinearLayout
+        android:id="@+id/egreso_ingreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/monto_edittext">
+
+<RadioGroup
+    android:id="@+id/group_in_eg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <RadioButton
+      android:id="@+id/button_ingresos"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Ingreso"/>
+
+   <RadioButton
+       android:id="@+id/button_egreso"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Egreso"/>
+
+</RadioGroup>
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/tipos"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginTop="20dp"
+       android:layout_below="@+id/egreso_ingreso">
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textStyle="bold"
+           android:textSize="20dp"
+           android:text="Tipo de Ingreso/Egreso"/>
+
+       <RadioGroup
+           android:id="@+id/tipos_ingre_egre"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+       <RadioButton
+           android:id="@+id/button_tarjeta_credito"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:layout_marginLeft="50dp"
+           android:text="Tarjeta de crédito"/>
+       <RadioButton
+           android:id="@+id/button_ahorro"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:layout_marginLeft="50dp"
+           android:text="Ahorro"/>
+       <RadioButton
+           android:id="@+id/button_efectivo"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:layout_marginLeft="50dp"
+           android:text="Efectivo"/>
+
+       </RadioGroup>
+   </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipos"
+        android:text="Registrar"/>
+
+
+</RelativeLayout>
